@@ -5,21 +5,25 @@ export const NavBar = styled.ul`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: ${(props) => props.theme.primary.main};
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 `;
 
 export const NavLink = styled.a`
   display: block;
-  color: white;
+  color: ${(props) => props.theme.primary.textColor};
   padding: 14px 16px;
   text-align: center;
   text-decoration: none;
 
   :hover {
-    background-color: #4fc3f7;
+    background-color: ${(props) => props.theme.primary.light};
 
     .active {
-      background-color: #04aa6d;
+      background-color: ${(props) => props.theme.primary.dark};
     }
   }
 `;
