@@ -1,9 +1,12 @@
 
-
-
+import {Header,Main,Footer} from "./components/Layout"
 function App() {
   return (
-    <h1>hello world</h1>
+    <>
+      <Header> This is Header</Header>
+      <Main>This is Main</Main>
+      <Footer>This is Footer</Footer>
+      </>
   );
 }
 
