@@ -1,8 +1,13 @@
 import styled from "styled-components";
+export const Header = styled.header`
+height :5vh;
 
+`;
 export const Main = styled.main`
-min-height :100%
-  padding : 2.5vh
+min-height :95vh;
+  padding :${(props)=> props.theme.spacing(1)};
+  flex-direction : column;
+  align-items :center;
 `;
 
 export const Footer = styled.footer`
