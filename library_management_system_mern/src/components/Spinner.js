@@ -5,13 +5,13 @@ const SpinningDiv = styled.div`
   border-radius: 50%;
   width: 5em;
   height: 5em;
-  animation: spin 2s liner infinite;
+  animation: spin 2s linear infinite;
   @keyframes spin {
     0% {
-      transform: rotate(0dge);
+      transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360dge);
+      transform: rotate(360deg);
     }
   }
 `;
@@ -20,10 +20,10 @@ const SpinnerContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
 `;
-const Spinner = () => {
+const Spinner = () => (
   <SpinnerContainer>
     <SpinningDiv />
-  </SpinnerContainer>;
-};
+  </SpinnerContainer>
+);
 
 export default Spinner;

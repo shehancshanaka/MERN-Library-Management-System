@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Spinner from "../components/Spinner";
 import { Content, Tab, TabContend, Tabs } from "../components/Tabs";
 
 export const Dashboard = () => {
