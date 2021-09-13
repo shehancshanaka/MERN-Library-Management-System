@@ -3,9 +3,10 @@ import { ThemeProvider } from "styled-components";
 import { BsBookHalf } from "react-icons/bs";
 
 import { Main, Footer, Header } from "./components/Layout";
-import { NavBar, NavItem, NavLink } from "./components/navbar";
+import { NavBar, NavItem, NavLink } from "./components/Navbar";
 
 import { Dashboard } from "./containers/Dashboard";
+import Spinner from "./components/Spinner";
 function App() {
   const theme = {
     primary: {
@@ -39,7 +40,8 @@ function App() {
       <Main>
         <Dashboard></Dashboard>
       </Main>
-      <Footer>Copyright {new Date().getFullYear}@ Spark Academy </Footer>
+   
+      <Footer>Copyright {new Date().getFullYear} @ Spark Academy </Footer>
     </ThemeProvider>
   );
 }
