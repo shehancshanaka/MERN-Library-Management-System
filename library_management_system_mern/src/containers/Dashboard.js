@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Content, Tab, TabContend, Tabs } from "../components/Tabs";
 
-export const Dashboard = () => {
+ const Dashboard = () => {
   const [active, setActive] = useState(0);
 
   const handleClick = (event) => {
@@ -34,3 +34,4 @@ export const Dashboard = () => {
     </>
   );
 };
+export default Dashboard;

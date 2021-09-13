@@ -8,14 +8,20 @@ import { NavBar, NavItem, NavLink } from "./components/Navbar";
 import{DASHBOARD,CATALOG} from "./shared/routes"
 
 
-import { Dashboard } from "./containers/Dashboard";
+//import { Dashboard,} from "./containers/Dashboard";
 import Spinner from "./components/Spinner";
 
-///const Dashboard = React.lazy(() => {
-  
-//return import ("./containers/Dashboard")
 
-//});
+const dashboard = React.lazy(() => {
+  
+return import ("./containers/Dashboard")
+
+});
+const NotFound = React.lazy(() => {
+  
+return import ("./containers/404")
+
+});
 
 
 function App() {
@@ -34,11 +40,12 @@ function App() {
 
   let routes = (
     <Suspense fallback={<Spinner></Spinner>}>
-    
       <Switch>
-        <Route exact path={DASHBOARD} component={Dashboard} />
+        <Route exact path={DASHBOARD} component={dashboard} />
 
         <Route exact path={CATALOG} component={Spinner} />
+
+        <Route component={NotFound} />
       </Switch>
     </Suspense>
   );
