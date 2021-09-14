@@ -1,37 +1,41 @@
-import React, { useState } from "react";
-import { Content, Tab, TabContend, Tabs } from "../components/Tabs";
+import React,{useEffect,useState} from "react";
+import  Tabs  from "../components/Tabs";
+import { getBooks } from "..//api/bookAPI";
+import Spinner from "../components/Spinner";
 
- const Dashboard = () => {
-  const [active, setActive] = useState(0);
+const Dashboard = () => {
+   const [isLoading,setIsLoading] = useState(false);
+  useEffect(() => {
+  
+    setIsLoading(true);
+    getBooks()
+      .then((response) => {
 
-  const handleClick = (event) => {
-    const index = parseInt(event.abc.id, 0);
+        if (!response.error)
+          console.log(response.data);
+       })
+      .catch((error) => {
+        console.log(error);
 
-    if (index !== active) {
-      setActive(index);
-    }
-  };
+      })
+      .finally(() => {
+      setIsLoading(false)
+    })
+
+},[])
+
+   const contents = [
+    
+     {title :"books",elements:<h1>Contents of books go here</h1>},
+     {title :"Members",elements:<h1>Contents of Members go here</h1>},
+     
+   ]
+  
 
   return (
-    <>
-      <Tabs>
-        <Tab id={0} onclick={handleClick} active={active === 0}>
-          content1
-        </Tab>
-
-        <Tab id={1} onclick={handleClick} active={active === 1}>
-          Content2
-        </Tab>
-        <TabContend>
-          <Content active={active === 0}>
-            <h1> content1</h1>
-          </Content>
-          <Content active={active === 1}>
-            <h1> content2 </h1>
-          </Content>
-        </TabContend>
-      </Tabs>
-    </>
+    
+    isLoading ?<Spinner/> : <Tabs contents={contents}/>
+    
   );
 };
 export default Dashboard;

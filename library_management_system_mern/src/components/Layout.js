@@ -4,10 +4,11 @@ height :5vh;
 
 `;
 export const Main = styled.main`
-min-height :95vh;
-  padding :${(props)=> props.theme.spacing(1)};
-  flex-direction : column;
-  align-items :center;
+  min-height: 95vh;
+  padding: ${(props) => props.theme.spacing(1)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Footer = styled.footer`
