@@ -73,7 +73,7 @@ function App() {
 </Router>
       </Main>
    
-      <Footer>Copyright {new Date().getFullYear} @ Spark Academy </Footer>
+      <Footer>Copyright {new Date().getFullYear()} @ Spark Academy </Footer>
     </ThemeProvider>
   );
 }
