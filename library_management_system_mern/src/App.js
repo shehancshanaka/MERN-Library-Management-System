@@ -43,6 +43,7 @@ function App() {
       <Switch>
         <Route exact path={DASHBOARD} component={dashboard} />
 
+        <Route exact path={"/"} component={dashboard} />
         <Route exact path={CATALOG} component={Spinner} />
 
         <Route component={NotFound} />
