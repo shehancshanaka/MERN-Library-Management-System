@@ -7,10 +7,10 @@ export const NavBar = styled.ul`
   overflow: hidden;
   background-color: ${(props) => props.theme.primary.main};
   width: 100%;
-  position :fixed;
-  top :0;
+  position: fixed;
+  top: 0;
   z-index: 1;
-  max-height :5vh;
+  max-height: 5vh;
 `;
 
 export const NavLink = styled.a`

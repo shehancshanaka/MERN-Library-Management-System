@@ -1,7 +1,6 @@
 import styled from "styled-components";
 export const Header = styled.header`
-height :5vh;
-
+  height: 5vh;
 `;
 export const Main = styled.main`
   min-height: 95vh;
