@@ -5,17 +5,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { Main, Footer, Header } from "./components/Layout";
 import { NavBar, NavItem, NavLink } from "./components/Navbar";
-import{DASHBOARD,CATALOG} from "./shared/routes"
-
-
-//import { Dashboard,} from "./containers/Dashboard";
+import { DASHBOARD, CATALOG } from "./shared/routes";
 import Spinner from "./components/Spinner";
 
-
 const dashboard = React.lazy(() => {
-  
-return import ("./containers/Dashboard")
-
+  return import("./containers/Dashboard/index");
 });
 const NotFound = React.lazy(() => {
   
