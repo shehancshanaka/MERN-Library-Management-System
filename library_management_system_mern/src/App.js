@@ -11,10 +11,8 @@ import Spinner from "./components/Spinner";
 const dashboard = React.lazy(() => {
   return import("./containers/Dashboard/index");
 });
-const NotFound = React.lazy(() => {
-  
+const NotFound = React.lazy(() => { 
 return import ("./containers/404")
-
 });
 
 

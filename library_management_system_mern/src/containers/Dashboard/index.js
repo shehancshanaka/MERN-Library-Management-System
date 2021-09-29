@@ -5,7 +5,7 @@ import Spinner from "../../components/Spinner";
 import Books from "./Books";
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState(null);
   useEffect(() => {
   
     setIsLoading(true);
@@ -13,7 +13,7 @@ const Dashboard = () => {
       .then((response) => {
 
         if (!response.error)
-          console.log(response.data);
+          
         setBooks(response.data);
        })
       .catch((error) => {
@@ -21,7 +21,7 @@ const Dashboard = () => {
 
       })
       .finally(() => {
-      setIsLoading(false)
+        setIsLoading(false);
     })
 
 },[])
